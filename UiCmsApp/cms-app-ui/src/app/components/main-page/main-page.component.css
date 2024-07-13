@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-sidenav
+  {
+    background-color:#4c5481;
+  }
+  .example-container {
+    width: 1700px;
+    height:850px;
+    
+    background-color: #fff
+   
+  }
+
+  .example-sidenav-content
+  {
+    text-align:center;
+    min-height: 600px;
+    min-width: 600px;
+  }
+  

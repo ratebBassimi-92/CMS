@@ -1,0 +1,25 @@
+
+<div class="saveForm">
+    <form [formGroup]="createCustomerForm">
+        <label for="" aria-hidden="true" style="color: #573b8a">Create New Customer</label>
+        <div style="margin-top: 10px;padding: 10px;">
+            <label class="labelInput">Enter the First Name Please</label>
+            <input type="text" formControlName="firstName" placeholder="firstName" required="">
+            <!--<small style="font-size: 10px; color: #992a2a;" *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">*UserName is Required</small>-->
+            <label class="labelInput">Enter the Last Name Please</label>
+            <input type="text" formControlName="lastName" placeholder="lastName" required="">
+            <!--<small  style="font-size: 10px; color: #992a2a;" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is Required</small>-->
+            <label class="labelInput">Enter the Email Please</label>
+            <input type="text" formControlName="email" placeholder="email" required="">
+            <label class="labelInput">Enter the Phone Please</label>
+            <input type="text" formControlName="phone" placeholder="phone" required="">
+            <label class="labelInput">Enter the Address Please</label>
+            <input type="text" formControlName="address" placeholder="address" required="">
+        </div>
+        <div>
+            <button (click)="saveCustomer()" type="submit">Login</button>
+            <button mat-button (click)="onClose()">Close</button>
+        </div>
+        
+    </form>
+</div>

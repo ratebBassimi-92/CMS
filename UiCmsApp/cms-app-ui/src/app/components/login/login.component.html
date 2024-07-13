@@ -1,0 +1,26 @@
+<div>
+    <img>
+</div>
+<div class="main" style="margin-left: 675px;">  	
+    <input type="checkbox" id="chk" aria-hidden="true">
+    <div>
+      <img src="../../../assets/Danat.png" alt="Girl in a jacket" width="250" height="80">
+    </div>
+    <div class="login">
+            <form [formGroup]="loginForm">
+                <label for="" aria-hidden="true" style="color: #573b8a">Login</label>
+                <div style="margin-top: 10px;padding: 10px;">
+                    <label>Enter the UserName Please</label>
+                    <input type="text" formControlName="userName" placeholder="userName" required="">
+                    <!--<small style="font-size: 10px; color: #992a2a;" *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">*UserName is Required</small>-->
+                    <label>Enter the Password Please</label>
+                    <input type="password" formControlName="password" placeholder="Password" required="">
+                    <!--<small  style="font-size: 10px; color: #992a2a;" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is Required</small>-->
+                </div>
+                <button (click)="submiteLogin()" type="submit">Login</button>
+            </form>
+    </div>
+</div>
+
+
+

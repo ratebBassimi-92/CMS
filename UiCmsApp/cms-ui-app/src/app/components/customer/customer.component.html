@@ -1,0 +1,67 @@
+
+<mat-card>
+  <mat-card-header>
+    <button mat-raised-button style="margin-left: 60%;" (click)="openDialogCreate()" color="primary">Add New Customer</button>
+    <button mat-raised-button (click)="generatePdf()">Print</button>
+  </mat-card-header>
+</mat-card>
+    <div class="example-button-row ">
+        
+    </div>
+    <div>
+        <table   mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+            
+            <!-- customer id Column -->
+            <ng-container matColumnDef="customerId">
+              <th mat-header-cell *matHeaderCellDef>Customer Identity</th>
+              <td mat-cell *matCellDef="let Customer">{{Customer.customerId}}</td>
+            </ng-container>
+          
+            <!-- customer Name Column -->
+            <ng-container matColumnDef="firstName">
+              <th mat-header-cell *matHeaderCellDef>Name</th>
+              <td mat-cell *matCellDef="let Customer">{{Customer.firstName}}</td>
+            </ng-container>
+            
+            <!-- customer Name Column -->
+            <ng-container matColumnDef="lastName">
+              <th mat-header-cell *matHeaderCellDef>Name</th>
+              <td mat-cell *matCellDef="let Customer">{{Customer.lastName}}</td>
+            </ng-container>
+            <!-- customer Email Column -->
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef>email</th>
+              <td mat-cell *matCellDef="let Customer">{{Customer.email}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="phone">
+                <th mat-header-cell *matHeaderCellDef>phone</th>
+                <td mat-cell *matCellDef="let Customer">{{Customer.phone}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="address">
+                <th mat-header-cell *matHeaderCellDef>address</th>
+                <td mat-cell *matCellDef="let Customer">{{Customer.address}}</td>
+              </ng-container>
+            
+            <!-- actions Column -->
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef>Actions</th>
+              <td mat-cell *matCellDef="let Customer"> 
+                <button (click)="viewDetail(Customer.customerId)" mat-icon-button color="primary" >
+                  <mat-icon>info</mat-icon>
+                </button>
+                <button (click)="editCutomer(Customer.customerId)" mat-icon-button color="primary" >
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+

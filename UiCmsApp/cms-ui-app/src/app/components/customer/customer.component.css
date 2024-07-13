@@ -1,0 +1,35 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  th{
+    color:#5b4880;
+    text-decoration: solid;
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  table{
+    background-color: rgb(184, 192, 199);
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
